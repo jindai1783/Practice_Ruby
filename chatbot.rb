@@ -11,7 +11,7 @@ def get_response(input)
   /#{key}/ =~ input
   response = RESPONSES[key]
   response.nil? ? 'sorry?' : response % { c1: $1, c2: $2, c3: $3}
-  
+
 end
 
 def colorize(text, color_code)
@@ -47,5 +47,6 @@ def conversation
   end
 end
 
+puts "This is Master"
 greeting
 conversation
