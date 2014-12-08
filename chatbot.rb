@@ -1,4 +1,12 @@
 def get_response(input)
+  add_question = input.match('Add "(.+?)" with response "(.+?)"')
+  if add_question
+    question = add_question[1]
+    answer = add_question[2]
+    RESPONSES[question] = answer
+    puts "questions and answer added"
+  end
+
   key = RESPONSES.keys.select {|k| /#{k}/ =~ input }.sample
   /#{key}/ =~ input
   response = RESPONSES[key]
@@ -21,14 +29,22 @@ RESPONSES = { 'goodbye' => 'bye',
               'I like (.*), (.*) and (.*)' => '%{c1} is good, %{c2} is okay, %{c3} is terrible',
               'I groove to (.*) and (.*)' => 'I love %{c1} but I hate %{c2}'}
 
-puts red("Hello, what's your name?")
-name = gets.chomp
-puts red("Hello #{name}")
-while(true) do
-	print green(name) + green(': ')
-	input = gets.chomp
-	if input == 'quit'
-		break
-	end
-  puts red('Bot: ') + red(get_response(input))
+
+
+def greeting
+  puts red("Hello, what's your name?")
+  name = gets.chomp
+  puts red("Hello #{name}")
+  print green(name) + green(': ')
 end
+
+def conversation
+  while(true) do
+  	input = gets.chomp
+  	break if input == 'quit'
+    puts red('Bot: ') + red(get_response(input))
+  end
+end
+
+greeting
+conversation
