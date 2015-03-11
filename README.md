@@ -1,8 +1,10 @@
-Chatterbox Challenge
-====================
+# Practice Ruby
 
-Instructions
-----------
+## Introduction
+
+This repository is a note of practising Ruby. It is Makers Academy's Chatterbox Challenge.
+
+## Instructions
 
 * Test time: up to you
 * Feel free to use google, your notes, books, etc but work on your own
@@ -11,8 +13,7 @@ Instructions
 * ***Please ensure that all your code is committed to a repo named 'chatterbox'***
 
 
-Tasks:
-------
+## Tasks
 
 First place the chatbot below in a file such as 'chatbot.rb', run it from the command line and then experiment chatting with it:
 
@@ -55,7 +56,6 @@ goodbye
 bye
 ```
 
-
 1. add at least five more responses so that the bot has a bigger range of conversation
 2. add at least another two more responses that use regex capture groups - that's the `%{c1}` being replaced with whatever matched the brackets `(.*)` in the regular expression.  In Ruby regex capture groups are stored in `$1`, `$2` etc after a regex match takes place
 3. extend the bot so that there is a key word, e.g. "quit" that will end the session
@@ -65,7 +65,7 @@ bye
 7. extend the bot to that the user can add new kinds of responses through the chat interaction
 8. extend the bot so that the set of responses is saved to a file and reloaded when the bot restarts
 
-Resources:
+## Resources
 
 * [Ruby Regular Expressions Tutorial](http://rubylearning.com/satishtalim/ruby_regular_expressions.html)
 * [Ruby Regex Cheat Sheet](http://www.ralfebert.de/archive/ruby/regex_cheat_sheet/)
